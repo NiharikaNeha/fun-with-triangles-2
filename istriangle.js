@@ -3,8 +3,10 @@ var btn = document.querySelector('#btn');
 var output = document.querySelector('#output')
 
 function btnHandler() {
-    if (inputAngles[0].value === "" || inputAngles[1].value === "" || inputAngles[2].value=== "" ) {
+    if (inputAngles[0].value === "" || inputAngles[1].value === "" || inputAngles[2].value=== "") {
         output.innerText = "Please enter valid inputs"
+    } else if (inputAngles[0].value === "0" || inputAngles[1].value === "0" || inputAngles[2].value=== "0"){
+        output.innerText = "Angle cannot be zero!!"
     } else {
         output.innerText = ""
         var sumOfAngles = Number(inputAngles[0].value) + Number(inputAngles[1].value) + Number(inputAngles[2].value);
